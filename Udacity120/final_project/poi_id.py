@@ -53,9 +53,16 @@ for key in data_dict:
         id = id + 1
     
 import matplotlib.pyplot as plt
+
+numfeatures = len(researchfeatures) - 1
+
+
+f = 0
+figure = plt.figure(figsize=(9, 9))
 for feature in researchfeatures:
     print (feature);
-    if (feature != 'email_address' and feature == 'bonus'):
+
+    if (feature != 'email_address'):# and (feature == 'deferral_payments' or feature == 'bonus')):
         points = []
         colors = []
         labels = []
@@ -67,15 +74,23 @@ for feature in researchfeatures:
                     colors += 'r'
                 else:
                     colors += 'b'
-            #color += data_dict[key]['poi'] == 1 ? 'r' : 'b'                
+            #color += data_dict[key]['poi'] == 1 ? 'r' : 'b' 
+                    
+        ax = plt.subplot(1, 2, f+1)
       
-        plt.xlim(0, int(max(labels)))
-        plt.ylim(0, int(max(points)))
-        plt.axis([0, int(max(labels)), 0 , int(max(points))]) 
+        ax.set_xlim(0, int(max(labels) * 1.1))
+        ax.set_ylim(0, int(max(points) * 1.1))
+        ax.set_title(feature)
+        #ax.axis([0, int(max(labels)), 0 , int(max(points))]) 
 
-        plt.scatter(labels, points, color=colors )
-
-        plt.show()
+        ax.scatter(labels, points, color=colors )
+        
+        f = f + 1
+        if (f == 2):
+            figure = plt.figure(figsize=(9, 9))
+            f = 0
+            
+plt.show()
 
     
 '''
