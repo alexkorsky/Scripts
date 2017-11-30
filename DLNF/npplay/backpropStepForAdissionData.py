@@ -53,6 +53,12 @@ for e in range(epochs):
         # here we only have one output so K = 1, J = 2
 
         # TODO: Calculate error term for hidden layer
+
+        a = np.dot(output_error_term, weights_hidden_output)
+        b = output_error_term * weights_hidden_output
+        c = (1 - hidden_layer_output)
+        d =  hidden_layer_output * (1 - hidden_layer_output)
+
         hidden_error_term = np.dot(output_error_term, weights_hidden_output) * \
                     hidden_layer_output * (1 - hidden_layer_output)
 
@@ -60,6 +66,12 @@ for e in range(epochs):
         # TODO: Update the change in weights
         del_w_hidden_output += output_error_term * hidden_layer_output
 
+        print("---------------------------------------")
+        print(x[:, None])
+        print(hidden_error_term)
+        
+        print (hidden_error_term * x[:, None])
+        
         # TODO: Calculate change in weights for input layer to hidden layer
         del_w_input_hidden += hidden_error_term * x[:, None]
 
