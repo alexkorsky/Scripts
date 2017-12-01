@@ -92,8 +92,9 @@ class NeuralNetwork(object):
         print("Error:")
         print(error)
         print("--")
-        print(delta_weights_h_o)
+        print(hidden_outputs[:, None])
         '''
+ 
         
         # TODO: Backpropagated error terms - Replace these values with your calculations.
         output_error_term = error[0] * 1 #1 is derivative when f(x) = x which is our case for output
@@ -156,7 +157,21 @@ class NeuralNetwork(object):
 #########################################################
 # Set your hyperparameters here
 ##########################################################
+
+# Absolutely BEST results were achieved with these
+# more or less hiddennodes were giving worst results.
+# small learning rate was the worst killer of results
+
+iterations = 2000 
+learning_rate = 0.8 
+hidden_nodes = 15 
+output_nodes = 1
+
+'''
+Originals:
+    
 iterations = 100
 learning_rate = 0.1
 hidden_nodes = 2
 output_nodes = 1
+'''
