@@ -27,3 +27,5 @@ print(sigmoid(x))
 print(sigmoid(y))
 print(sigmoid(z))
 print(sigmoid(-5))
+
+print(np.full((4,), 45))

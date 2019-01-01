@@ -60,3 +60,6 @@ print("Multiply 2:\n{}".format(multiply_inputs(np.array([[1,2,3],[4,5,6]]), np.a
 print("Multiply 3:\n{}".format(multiply_inputs(np.array([[1,2,3],[4,5,6]]), np.array([[1,2]]))))
 
 print("Mean == {}".format(find_mean([1,3,4])))
+
+vv =  (7,)
+print(vv)

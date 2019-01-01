@@ -15,3 +15,5 @@ def softmax(L):
     return result
     
 print(softmax([1,0]))
+
+print(softmax([2,3,5]))

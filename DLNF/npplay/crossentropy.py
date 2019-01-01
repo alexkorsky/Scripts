@@ -5,7 +5,7 @@ import numpy as np
 
 # THis is for binary output Yes No -- so Y vector is just 0s and 1s
 
-def cross_entropy(Y, P):
+def cross_entropyMineNonnVectorized(Y, P):
     result = 0
     for i in range(len(Y)):
         if (Y[i] == 1):
