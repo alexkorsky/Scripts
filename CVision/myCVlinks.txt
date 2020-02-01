@@ -1,0 +1,15 @@
+Convolution layer links to study:
+
+https://adventuresinmachinelearning.com/convolutional-neural-networks-tutorial-in-pytorch/
+
+Suggested  by reviewer:
+
+https://www.ischool.berkeley.edu/projects/2015/facial-keypoints-detection-effort-top-kaggle-leaderboard
+http://cs231n.stanford.edu/reports/2016/pdfs/007_Report.pdf
+https://prateekvjoshi.com/2016/03/29/understanding-xavier-initialization-in-deep-neural-networks/
+https://towardsdatascience.com/batch-normalization-in-neural-networks-1ac91516821c
+https://www.youtube.com/watch?v=AgkfIQ4IGaM
+https://github.com/yosinski/deep-visualization-toolbox
+
+R-CNN vs FAST R-CNN vd FASTER-R-CNN:
+https://towardsdatascience.com/deep-learning-for-object-detection-a-comprehensive-review-73930816d8d9
